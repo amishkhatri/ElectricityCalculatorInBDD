@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interface\**" />
+    <EmbeddedResource Remove="Interface\**" />
+    <None Remove="Interface\**" />
+    <SpecFlowFeatureFiles Remove="Interface\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Interface\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="EnergyChargesTest.cs" />
+    <Compile Remove="Features\DutyCharges.feature.cs" />
+    <Compile Remove="Features\FCACharges.feature.cs" />
+    <Compile Remove="Models\ElectricityChargesEnums.cs" />
+    <Compile Remove="Models\EnergyCharges.cs" />
+    <Compile Remove="StepDefinitions\DutyChargesCalculationForBillSteps.cs" />
+    <Compile Remove="StepDefinitions\FCAChargesCalculationInElectricityBillSteps.cs" />
+    <Compile Remove="StepDefinitions\FCAChargesCalculationsSteps.cs" />
+    <Compile Remove="StepDefinitions\FCAStepDefinition.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Remove="Features\DutyCharges.feature" />
+    <SpecFlowFeatureFiles Remove="Features\FCACharges.feature" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+    <PackageReference Include="SpecFlow" Version="3.7.13" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.7.43" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.7.13" />
+    <PackageReference Include="SpecRun.SpecFlow" Version="3.7.3" />
+  </ItemGroup>
+
+</Project>
